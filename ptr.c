@@ -1,13 +1,13 @@
 #include<stdio.h>
-int sum(int n);
+void printAdd(int *Px, int *Py);
 int main(){
-    int age = 22;
-    int *ptr = &age;
-    int **pptr = (&ptr);
-    printf("enter number of pointer: %d",age);
+    int x = 5;
+    int y = 2;
+    printAdd(&x, &y);
     return 0;
 }
-int sum(int n){
-    n = n * n;
-    printf("enter number: %d",n);
+void printAdd(int *Px, int *Py){
+    int sum;
+    sum = *Px + *Py;
+    printf("sum of : %d", sum);
 }
